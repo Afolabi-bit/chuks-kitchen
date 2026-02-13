@@ -39,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body
-        className={`${jost.variable} ${islandMoments.variable} antialiased`}
+        className={`${jost.variable} ${islandMoments.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>
