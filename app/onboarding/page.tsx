@@ -2,6 +2,7 @@
 
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import { FaCartShopping } from "react-icons/fa6";
 
 export default function Onboarding() {
   return (
@@ -60,11 +61,7 @@ export default function Onboarding() {
 
               <li className="flex items-center gap-[11px] p-[6px_9px] w-full h-[56px] bg-[#F3F4F6] rounded-[13px] ">
                 <span className="w-[44px] h-[44px] bg-[#FFE1C4] rounded-[13px] flex items-center justify-center ">
-                  <img
-                    src="/fork-knife.png"
-                    alt="fork"
-                    className="object-contain"
-                  />
+                  <FaCartShopping className="text-[#FF7A18]" />
                 </span>
                 <span className="font-medium text-[16px] leading-[24px] text-[#000000] ">
                   Support Local Business

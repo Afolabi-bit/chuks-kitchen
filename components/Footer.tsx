@@ -1,3 +1,5 @@
+"use client";
+
 import { FaArrowUp } from "react-icons/fa6";
 
 export default function Footer() {
@@ -147,7 +149,11 @@ export default function Footer() {
             </a>
           </span>
         </p>
-        <button className="text-white size-[30px] md:size-[40px] lg:size-[52px] rounded-full bg-[#0081FE] flex items-center justify-center cursor-pointer transition-all duration-150 hover:bg-[#0070E0] active:scale-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0081FE] focus-visible:ring-offset-2 ">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          aria-label="Back to top"
+          className="text-white size-[30px] md:size-[40px] lg:size-[52px] rounded-full bg-[#0081FE] flex items-center justify-center cursor-pointer transition-all duration-150 hover:bg-[#0070E0] active:scale-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0081FE] focus-visible:ring-offset-2 "
+        >
           <FaArrowUp className="size-[15px] md:size-[20px]" />
         </button>
       </div>
