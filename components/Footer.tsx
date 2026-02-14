@@ -106,6 +106,14 @@ export default function Footer() {
                 href="#"
                 className="font-poppins text-[12px] leading-[20px] text-[#FFFFFF] "
               >
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="font-poppins text-[12px] leading-[20px] text-[#FFFFFF] "
+              >
                 Twitter
               </a>
             </li>
@@ -132,7 +140,7 @@ export default function Footer() {
       <div className="mt-[36px] flex justify-between items-center w-full px-6 md:px-10 lg:px-20 xl:px-[110px] ">
         <p className=" text-[10px] text-left ">
           <span className="font-poppins lg:text-[12px] leading-[20px] text-[#FFFFFF]/65">
-            &copy; {new Date().getFullYear()} All rights reserved.
+            &copy; {new Date().getFullYear()} Lift Media. All rights reserved.
           </span>
           <span className="flex flex-col">
             <a
