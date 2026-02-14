@@ -34,15 +34,22 @@ chuks-kitchen/
 ├── app/
 │   ├── globals.css          # Global styles, Tailwind theme, custom breakpoints
 │   ├── layout.tsx           # Root layout with Inter, Jost, Island Moments & Poppins fonts
-│   └── onboarding/
-│       └── page.tsx         # Landing / onboarding page
+│   ├── onboarding/
+│   │   └── page.tsx         # Landing / onboarding page
+│   └── auth/
+│       └── page.tsx         # Login & create account page
 ├── components/
 │   └── Footer.tsx           # Global footer with back-to-top button
 └── public/
     ├── onboarding-desktop.png
     ├── onboarding-mobile.png
     ├── fork-knife.png
-    └── delivery-icon.png
+    ├── delivery-icon.png
+    ├── mail.svg
+    ├── lock.svg
+    ├── visibility_off.svg
+    ├── google.png
+    └── facebook.svg
 ```
 
 ## Pages Built
@@ -57,6 +64,17 @@ The landing page introducing users to Chuk's Kitchen. It features:
 - **Dual CTA buttons** — "Start Your Order" (primary) and "Learn More About Us" (secondary)
 - **Interactive buttons** — hover fills, active press scale, focus-visible accessibility rings
 - **Global footer** — 4-column layout with links, contact info, social links, and a scroll-to-top button
+
+### Auth (`/auth`)
+
+Login and account creation page with client-side form toggling. It features:
+
+- **Split layout** — left branded image panel (orange overlay with tagline) + right form panel on desktop/laptop; image hidden on tablet and below
+- **Login form** — email and password fields with inline icons, "Forgot Password" link, and "Continue" CTA
+- **Create Account form** — email, phone number, password, confirm password fields with Terms & Conditions checkbox
+- **Social login** — "Continue with Google" and "Continue with Facebook" buttons on both forms
+- **Form toggle** — "Create an account" / "Sign in" links switch between login and signup without a page reload
+- **Responsive design** — forms center and fill the viewport on mobile/tablet with adjusted padding and full-width buttons
 
 ## Custom Breakpoints
 
@@ -80,19 +98,16 @@ Beyond the original Figma design, the following adjustments were made during dev
 - **Back to top button** — the button scrolls to the top of the page.
 - **Footer** — the footer is now always visible and has a 1-column layout with links, contact info, social links, and a scroll-to-top button on mobile screens.
   - **Always visible** — footer displays on all screen sizes (removed mobile `hidden`).
-  - **Footer padding** — reduced to `py-[40px]` on mobile, expanding to `py-[65px]` on `md:`.
-  - **Column layout** — uses `flex-wrap` on mobile/tablet with `lg:flex-nowrap` and `lg:justify-between` for a natural reflow. On `xl:` restores the original centered layout with `101px` gaps.
-  - **Column widths** — `w-full` on mobile → `lg:w-[22%]` for the brand column, `lg:w-fit` for link columns → exact `xl:w-[229.25px]` at desktop.
-  - **Typography scaling** — heading sizes reduce on tablet (`md:text-[16px]`) and scale up through `lg:` and `xl:`. Brand description text scales from `12px` → `20px` → `24px`.
-  - **Back-to-top button** — sized `30px` on mobile → `40px` on `md:` → `52px` on `lg:`, with a functional smooth scroll to top.
-  - **Bottom bar** — added Privacy Policy and Terms of Service links below the copyright text, stacked vertically. Added hover color transition (`#64B5F6` → `#288ff7`).
-  - **Address text wrapping** — added `text-wrap` to the address link to prevent overflow.
 
 ### Onboarding Page
 
 - **Mobile hero image** — moved the hero image below the Logo and Sign in button. This promotes immediate recognition of the site's value proposition.
 - **Support Local Business icon** — the second feature ("Support Local Business") uses a distinct `FaCartShopping` icon instead of the generic fork-knife icon, better communicating the feature's purpose.
 - **In-page footer removed** — the copyright / Privacy Policy / Terms of Service section originally inside the hero panel was removed; these links were relocated to the global footer.
+- **Hover States** — buttons and links now have hover states.
+
+### Auth Page
+
 - **Hover States** — buttons and links now have hover states.
 
 ## Fonts

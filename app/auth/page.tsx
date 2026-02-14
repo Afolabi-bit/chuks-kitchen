@@ -32,12 +32,12 @@ export default function Auth() {
         </div>
 
         {form === "login" && (
-          <div className="w-full bg-[#F3F4F6] lg:w-[55%] xl:w-[50%] h-full relative flex flex-col pt-[208px] pb-[197px] lg:pl-[50px] lg:pr-[40px] xl:pl-[133px] xl:pr-[127px] ">
+          <div className="w-full bg-[#F3F4F6] lg:w-[55%] xl:w-[50%] h-full relative flex flex-col  pt-[60px] pb-[80px] px-[16px] md:pt-[140px] md:pb-[120px] md:px-[40px] lg:pt-[208px] lg:pb-[197px] lg:px-[40px] xl:pl-[133px] xl:pr-[127px] items-center xl:items-start ">
             {/*  */}
-            <div className=" max-w-[470px] h-auto flex flex-col items-center">
+            <div className="w-full max-w-[470px] h-auto flex flex-col items-center">
               {/*  */}
               {/*  */}
-              <div className="flex flex-col items-center w-full px-[20px] lg:px-0 xl:w-[574px]">
+              <div className="flex flex-col items-center w-full lg:px-0 xl:w-[574px]">
                 <h2 className="font-island font-medium text-[#FF7A18] leading-[41px] text-[32px] sm:text-[40.8px] ">
                   Chuks Kitchen
                 </h2>
@@ -56,7 +56,7 @@ export default function Auth() {
                     >
                       Email
                     </label>
-                    <div className="w-full h-[54px] border border-[#BDBDBD] p-[4px_16px] rounded-[8px] flex items-center gap-[15px]">
+                    <div className="w-full h-[54px] border border-[#BDBDBD] p-[4px_16px] rounded-[8px] flex items-center gap-[15px] transition-colors duration-200 focus-within:border-[#FF7A18]">
                       <img src="/mail.svg" alt="lock icon" />
                       <input
                         type="email"
@@ -73,7 +73,7 @@ export default function Auth() {
                     >
                       Password
                     </label>
-                    <div className="w-full h-[54px] border border-[#BDBDBD] p-[4px_16px] rounded-[8px] flex items-center gap-[15px]">
+                    <div className="w-full h-[54px] border border-[#BDBDBD] p-[4px_16px] rounded-[8px] flex items-center gap-[15px] transition-colors duration-200 focus-within:border-[#FF7A18]">
                       <img src="/lock.svg" alt="lock icon" />
                       <input
                         type="password"
@@ -91,13 +91,13 @@ export default function Auth() {
                 </div>
                 <a
                   href="#"
-                  className="text-[12px] leading-[16px] text-[#1E88E5] self-end "
+                  className="text-[12px] leading-[16px] text-[#1E88E5] self-end transition-colors duration-200 hover:text-[#1565C0] hover:underline active:text-[#0D47A1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18] rounded-sm "
                 >
                   Forgot Password?
                 </a>
                 <button
                   type="submit"
-                  className="p-[18px_196px] rounded-[10px] bg-[#FF7A18] text-[16px] leading-[24px] font-semibold text-[#FFFFFF] "
+                  className="w-full py-[18px] rounded-[10px] bg-[#FF7A18] text-[16px] leading-[24px] font-semibold text-[#FFFFFF] transition-all duration-200 hover:bg-[#E56A0E] active:scale-[0.98] active:bg-[#CC5E0C] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18] cursor-pointer "
                 >
                   Continue
                 </button>
@@ -105,7 +105,7 @@ export default function Auth() {
                   Or continue with
                 </p>
                 <div className="flex flex-col gap-[16px] w-full">
-                  <button className="flex items-center gap-[15px] w-full bg-white justify-center border border-[#BDBDBD] rounded-[6px] p-[4px_113px] h-[48px] ">
+                  <button className="flex items-center gap-[15px] w-full bg-white justify-center border border-[#BDBDBD] rounded-[6px] px-[16px] h-[48px] transition-all duration-200 hover:bg-[#F5F5F5] hover:border-[#9E9E9E] active:scale-[0.98] active:bg-[#EEEEEE] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18] cursor-pointer ">
                     <img
                       src="/google.png"
                       alt="google icon"
@@ -115,7 +115,7 @@ export default function Auth() {
                       Continue with Google
                     </span>
                   </button>
-                  <button className="flex items-center gap-[15px] w-full bg-white justify-center border border-[#BDBDBD] rounded-[6px] p-[4px_113px] h-[48px] ">
+                  <button className="flex items-center gap-[15px] w-full bg-white justify-center border border-[#BDBDBD] rounded-[6px] px-[16px] h-[48px] transition-all duration-200 hover:bg-[#F5F5F5] hover:border-[#9E9E9E] active:scale-[0.98] active:bg-[#EEEEEE] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18] cursor-pointer ">
                     <img src="/facebook.svg" alt="facebook icon" />
                     <span className="text-[14px] leading-[16px] text-center text-[#3B4758] ">
                       Continue with Facebook
@@ -126,7 +126,7 @@ export default function Auth() {
                   Don't have an account?{" "}
                   <span
                     onClick={() => setForm("create")}
-                    className="text-[#1E88E5]"
+                    className="text-[#1E88E5] cursor-pointer transition-colors duration-200 hover:text-[#1565C0] hover:underline active:text-[#0D47A1] "
                   >
                     Create an account
                   </span>
@@ -137,12 +137,12 @@ export default function Auth() {
         )}
 
         {form === "create" && (
-          <div className="w-full bg-[#F3F4F6] lg:w-[55%] xl:w-[50%] h-full relative flex flex-col pt-[94px] pb-[108px]  lg:pl-[50px] lg:pr-[40px] xl:pl-[133px] xl:pr-[127px] ">
+          <div className="w-full bg-[#F3F4F6] lg:w-[55%] xl:w-[50%] h-full relative flex flex-col pt-[60px] pb-[60px] px-[16px] md:pt-[80px] md:pb-[80px] md:px-[40px] lg:pt-[94px] lg:pb-[108px] lg:px-[40px] xl:pl-[133px] xl:pr-[127px] items-center xl:items-start ">
             {/*  */}
-            <div className=" max-w-[470px] h-auto flex flex-col items-center">
+            <div className="w-full max-w-[470px] h-auto flex flex-col items-center">
               {/*  */}
               {/*  */}
-              <div className="flex flex-col items-center w-full px-[20px] lg:px-0 xl:w-[574px]">
+              <div className="flex flex-col items-center w-full lg:px-0 xl:w-[574px]">
                 <h2 className="font-island font-medium text-[#FF7A18] leading-[41px] text-[32px] sm:text-[40.8px] ">
                   Chuks Kitchen
                 </h2>
@@ -161,7 +161,7 @@ export default function Auth() {
                     >
                       Email
                     </label>
-                    <div className="w-full h-[54px] border border-[#BDBDBD] p-[4px_16px] rounded-[8px] flex items-center gap-[15px]">
+                    <div className="w-full h-[54px] border border-[#BDBDBD] p-[4px_16px] rounded-[8px] flex items-center gap-[15px] transition-colors duration-200 focus-within:border-[#FF7A18]">
                       <img src="/mail.svg" alt="lock icon" />
                       <input
                         type="email"
@@ -179,7 +179,7 @@ export default function Auth() {
                     >
                       Phone Number
                     </label>
-                    <div className="w-full h-[54px] border border-[#BDBDBD] p-[4px_16px] rounded-[8px] flex items-center gap-[15px]">
+                    <div className="w-full h-[54px] border border-[#BDBDBD] p-[4px_16px] rounded-[8px] flex items-center gap-[15px] transition-colors duration-200 focus-within:border-[#FF7A18]">
                       <img src="/mail.svg" alt="lock icon" />
                       <input
                         type="number"
@@ -197,7 +197,7 @@ export default function Auth() {
                     >
                       Password
                     </label>
-                    <div className="w-full h-[54px] border border-[#BDBDBD] p-[4px_16px] rounded-[8px] flex items-center gap-[15px]">
+                    <div className="w-full h-[54px] border border-[#BDBDBD] p-[4px_16px] rounded-[8px] flex items-center gap-[15px] transition-colors duration-200 focus-within:border-[#FF7A18]">
                       <img src="/lock.svg" alt="lock icon" />
                       <input
                         type="password"
@@ -220,7 +220,7 @@ export default function Auth() {
                     >
                       Confirm Password
                     </label>
-                    <div className="w-full h-[54px] border border-[#BDBDBD] p-[4px_16px] rounded-[8px] flex items-center gap-[15px]">
+                    <div className="w-full h-[54px] border border-[#BDBDBD] p-[4px_16px] rounded-[8px] flex items-center gap-[15px] transition-colors duration-200 focus-within:border-[#FF7A18]">
                       <img src="/lock.svg" alt="lock icon" />
                       <input
                         type="password"
@@ -236,24 +236,36 @@ export default function Auth() {
                     </div>
                   </div>
                 </div>
-
                 <div className="flex self-start gap-[10px]">
-                  <input type="checkbox" name="tandc" id="tandc" />
-                  <label htmlFor="tandc">
+                  <input
+                    type="checkbox"
+                    name="tandc"
+                    id="tandc"
+                    className="w-[18px] h-[18px]"
+                  />
+                  <label
+                    htmlFor="tandc"
+                    className="text-[#616161] font-medium leading-[20px] text-[14px] "
+                  >
                     I agree to the{" "}
-                    <a href="#" className="text-[#1E88E5]">
+                    <a
+                      href="#"
+                      className="text-[#1E88E5] transition-colors duration-200 hover:text-[#1565C0] hover:underline active:text-[#0D47A1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18] rounded-sm "
+                    >
                       Terms &amp; Conditions
                     </a>{" "}
                     and{" "}
-                    <a href="#" className="text-[#1E88E5]">
+                    <a
+                      href="#"
+                      className="text-[#1E88E5] transition-colors duration-200 hover:text-[#1565C0] hover:underline active:text-[#0D47A1] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18] rounded-sm "
+                    >
                       Privacy Policy
                     </a>
                   </label>
                 </div>
-
                 <button
                   type="submit"
-                  className="p-[18px_196px] rounded-[10px] bg-[#FF7A18] text-[16px] leading-[24px] font-semibold text-[#FFFFFF] "
+                  className="w-full py-[18px] rounded-[10px] bg-[#FF7A18] text-[16px] leading-[24px] font-semibold text-[#FFFFFF] transition-all duration-200 hover:bg-[#E56A0E] active:scale-[0.98] active:bg-[#CC5E0C] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18] cursor-pointer "
                 >
                   Continue
                 </button>
@@ -261,7 +273,7 @@ export default function Auth() {
                   Or continue with
                 </p>
                 <div className="flex flex-col gap-[16px] w-full">
-                  <button className="flex items-center gap-[15px] w-full bg-white justify-center border border-[#BDBDBD] rounded-[6px] p-[4px_113px] h-[48px] ">
+                  <button className="flex items-center gap-[15px] w-full bg-white justify-center border border-[#BDBDBD] rounded-[6px] px-[16px] h-[48px] transition-all duration-200 hover:bg-[#F5F5F5] hover:border-[#9E9E9E] active:scale-[0.98] active:bg-[#EEEEEE] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18] cursor-pointer ">
                     <img
                       src="/google.png"
                       alt="google icon"
@@ -271,7 +283,7 @@ export default function Auth() {
                       Continue with Google
                     </span>
                   </button>
-                  <button className="flex items-center gap-[15px] w-full bg-white justify-center border border-[#BDBDBD] rounded-[6px] p-[4px_113px] h-[48px] ">
+                  <button className="flex items-center gap-[15px] w-full bg-white justify-center border border-[#BDBDBD] rounded-[6px] px-[16px] h-[48px] transition-all duration-200 hover:bg-[#F5F5F5] hover:border-[#9E9E9E] active:scale-[0.98] active:bg-[#EEEEEE] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A18] cursor-pointer ">
                     <img src="/facebook.svg" alt="facebook icon" />
                     <span className="text-[14px] leading-[16px] text-center text-[#3B4758] ">
                       Continue with Facebook
@@ -281,8 +293,8 @@ export default function Auth() {
                 <p className="text-[12px] leading-[16px] text-center text-[#616161] ">
                   Already have an account?{" "}
                   <span
-                    onClick={() => setForm("create")}
-                    className="text-[#1E88E5]"
+                    onClick={() => setForm("login")}
+                    className="text-[#1E88E5] cursor-pointer transition-colors duration-200 hover:text-[#1565C0] hover:underline active:text-[#0D47A1] "
                   >
                     Sign in
                   </span>

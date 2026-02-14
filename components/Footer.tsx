@@ -5,7 +5,7 @@ import { FaArrowUp } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className=" footer flex flex-col items-center text-center w-full h-auto xl:h-[449px] py-[40px] md:py-[65px] gap-[4px] ">
-      <div className="flex flex-row flex-wrap lg:flex-nowrap lg:justify-between xl:justify-center items-start px-6 md:px-10 lg:px-20 gap-8 lg:gap-[60px] xl:gap-[101px] ">
+      <div className="flex flex-row flex-wrap  md:flex-nowrap lg:justify-between xl:justify-center items-start px-6 md:px-10 lg:px-20 gap-8 lg:gap-[60px] xl:gap-[101px] ">
         <div className="flex flex-col items-start w-full lg:w-[22%]  xl:w-[229.25px] h-auto xl:h-[218px] ">
           <h2 className="font-island text-[#FF7A18] leading-[37px] text-[32px] md:text-[24px] lg:text-[37px] ">
             Chuks Kitchen
