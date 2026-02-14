@@ -128,11 +128,27 @@ export default function Footer() {
       </div>
 
       <div className="mt-[36px] flex justify-between items-center w-full px-6 md:px-10 lg:px-20 xl:px-[110px] ">
-        <p className="font-poppins text-[10px] lg:text-[12px] leading-[20px] text-[#FFFFFF]/65 ">
-          &copy; {new Date().getFullYear()} All rights reserved.
+        <p className=" text-[10px] text-left ">
+          <span className="font-poppins lg:text-[12px] leading-[20px] text-[#FFFFFF]/65">
+            &copy; {new Date().getFullYear()} All rights reserved.
+          </span>
+          <span className="flex flex-col">
+            <a
+              href="#"
+              className="font-medium  leading-[20px] text-[#64B5F6] hover:text-[#288ff7]"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              className="font-medium  leading-[20px] text-[#64B5F6] hover:text-[#288ff7]"
+            >
+              Terms of Service
+            </a>
+          </span>
         </p>
-        <button className="text-white md:size-[40px] lg:size-[52px] rounded-full bg-[#0081FE] flex items-center justify-center cursor-pointer  ">
-          <FaArrowUp className="size-[20px]" />
+        <button className="text-white size-[30px] md:size-[40px] lg:size-[52px] rounded-full bg-[#0081FE] flex items-center justify-center cursor-pointer transition-all duration-150 hover:bg-[#0070E0] active:scale-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0081FE] focus-visible:ring-offset-2 ">
+          <FaArrowUp className="size-[15px] md:size-[20px]" />
         </button>
       </div>
     </footer>

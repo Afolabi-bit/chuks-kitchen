@@ -21,7 +21,7 @@ export default function Onboarding() {
             <h2 className="font-island font-medium text-[#FF7A18] leading-[41px] text-[32px] sm:text-[40.8px] ">
               Chuks Kitchen
             </h2>
-            <button className=" text-[16px] font-semibold leading-[24px] w-[100px] h-[40px] md:w-[160px] md:h-[54px] border-2 rounded-[10px] text-[#1E88E5] text-center border-[#1E88E5]">
+            <button className=" text-[16px] font-semibold leading-[24px] w-[100px] h-[40px] md:w-[160px] md:h-[54px] border-2 rounded-[10px] text-[#1E88E5] text-center border-[#1E88E5] transition-all duration-150 hover:bg-[#1E88E5] hover:text-white active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E88E5] focus-visible:ring-offset-2 cursor-pointer">
               Sign in
             </button>
           </div>
@@ -87,58 +87,17 @@ export default function Onboarding() {
 
             {/* buttons */}
             <div className="flex flex-col gap-[31px]">
-              <button className="w-full h-[50px] xl:h-[60px] bg-[#FF7A18] rounded-[10px] text-white font-semibold text-[16px] leading-[24px] ">
+              <button className="w-full h-[50px] xl:h-[60px] bg-[#FF7A18] rounded-[10px] text-white font-semibold text-[16px] leading-[24px] transition-all duration-150 hover:bg-[#E56A0E] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF7A18] focus-visible:ring-offset-2 cursor-pointer ">
                 Start Your Order
               </button>
-              <button className="w-full h-[50px] xl:h-[60px] border-2 border-[#1E88E5] rounded-[10px] font-semibold text-[16px] leading-[24px] text-[#1E88E5] ">
+              <button className="w-full h-[50px] xl:h-[60px] border-2 border-[#1E88E5] rounded-[10px] font-semibold text-[16px] leading-[24px] text-[#1E88E5] transition-all duration-150 hover:bg-[#1E88E5] hover:text-white active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E88E5] focus-visible:ring-offset-2 cursor-pointer ">
                 Learn More About Us
               </button>
             </div>
           </div>
-
-          {/* footer
-          <div className="text-center">
-            <p className="inline-flex gap-2 md:gap-[17px]">
-              <span className="font-medium text-[14px] leading-[20px] text-[#1F2937]">
-                &copy; {new Date().getFullYear()} Chuk's Kitchen.
-              </span>
-              <a
-                href="#"
-                className="font-medium text-[14px] leading-[20px] text-[#64B5F6]"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="#"
-                className="font-medium text-[14px] leading-[20px] text-[#64B5F6]"
-              >
-                Terms of Service
-              </a>
-            </p>
-          </div> */}
         </div>
       </section>
       <Footer />
     </main>
   );
 }
-/* Frame 1000004286 */
-
-// /* Auto layout */
-// display: flex;
-// flex-direction: row;
-// align-items: center;
-// padding: 6px 9px;
-// gap: 11px;
-
-// width: 330px;
-// height: 56px;
-
-// background: #F3F4F6;
-// border-radius: 8px;
-
-// /* Inside auto layout */
-// flex: none;
-// order: 1;
-// align-self: stretch;
-// flex-grow: 0;
