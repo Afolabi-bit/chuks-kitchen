@@ -2,20 +2,20 @@ import { FaArrowUp } from "react-icons/fa6";
 
 export default function Footer() {
   return (
-    <footer className=" footer hidden md:flex flex-col items-center text-center w-full h-auto xl:h-[449px] py-[65px] gap-[4px] ">
-      <div className="flex flex-row lg:justify-between xl:justify-center items-start px-6 md:px-10 lg:px-20 gap-8 lg:gap-[60px] xl:gap-[101px] ">
+    <footer className=" footer flex flex-col items-center text-center w-full h-auto xl:h-[449px] py-[40px] md:py-[65px] gap-[4px] ">
+      <div className="flex flex-row flex-wrap lg:flex-nowrap lg:justify-between xl:justify-center items-start px-6 md:px-10 lg:px-20 gap-8 lg:gap-[60px] xl:gap-[101px] ">
         <div className="flex flex-col items-start w-full lg:w-[22%]  xl:w-[229.25px] h-auto xl:h-[218px] ">
-          <h2 className="font-island text-[#FF7A18] leading-[37px] text-[37px] ">
+          <h2 className="font-island text-[#FF7A18] leading-[37px] text-[32px] md:text-[24px] lg:text-[37px] ">
             Chuks Kitchen
           </h2>
-          <p className="font-jost text-[#FFFFFF] lg:text-[20px] xl:text-[24px] leading-[36px] text-left ">
+          <p className="font-jost text-[#FFFFFF] md:text-[12px] lg:text-[20px] xl:text-[24px] xl:leading-[36px] text-left ">
             Bringing the authentic flavors of Nigerian home cooking to your
             table, with passion and care.
           </p>
         </div>
 
         <div className="flex flex-col items-start w-full lg:w-fit  xl:w-[229.25px] h-auto xl:h-[218px] ">
-          <h2 className="font-jost text-[#FFFFFF] text-[24px] leading-[36px] text-left ">
+          <h2 className="font-jost text-[#FFFFFF] md:text-[16px] lg:text-[24px] leading-[36px] text-left ">
             Quick Links
           </h2>
           <ul className="flex flex-col items-start w-full xl:w-[229.25px] h-auto xl:h-[218px] ">
@@ -63,10 +63,10 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-start w-full lg:w-fit  xl:w-[229.25px] h-auto xl:h-[218px] ">
-          <h2 className="font-jost text-[#FFFFFF] text-[24px] leading-[36px] text-left ">
+          <h2 className="font-jost text-[#FFFFFF]  md:text-[16px] lg:text-[24px] leading-[36px] text-left ">
             Contact Us
           </h2>
-          <ul className="flex flex-col items-start w-full xl:w-[229.25px] h-auto xl:h-[218px] ">
+          <ul className="flex flex-col items-start text-left w-full xl:w-[229.25px] h-auto xl:h-[218px] ">
             <li>
               <a
                 href="#"
@@ -86,7 +86,7 @@ export default function Footer() {
             <li>
               <a
                 href="#"
-                className="font-poppins text-[12px] leading-[20px] text-[#FFFFFF] "
+                className="font-poppins text-[12px] text-wrap leading-[20px] text-[#FFFFFF] "
               >
                 123 Taste Blvd, Lagos, Nigeria
               </a>
@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-start w-full lg:w-fit  xl:w-[229.25px] h-auto xl:h-[218px] ">
-          <h2 className="font-jost text-[#FFFFFF] text-[24px] leading-[36px] text-left ">
+          <h2 className="font-jost text-[#FFFFFF] text-[16px] lg:text-[24px] leading-[36px] text-left ">
             Follow Us
           </h2>
           <ul className="flex flex-col items-start w-full xl:w-[229.25px] h-auto xl:h-[218px] ">
@@ -128,10 +128,10 @@ export default function Footer() {
       </div>
 
       <div className="mt-[36px] flex justify-between items-center w-full px-6 md:px-10 lg:px-20 xl:px-[110px] ">
-        <p className="font-poppins text-[12px] leading-[20px] text-[#FFFFFF]/65 ">
+        <p className="font-poppins text-[10px] lg:text-[12px] leading-[20px] text-[#FFFFFF]/65 ">
           &copy; {new Date().getFullYear()} All rights reserved.
         </p>
-        <button className="text-white size-[52px] rounded-full bg-[#0081FE] flex items-center justify-center cursor-pointer  ">
+        <button className="text-white md:size-[40px] lg:size-[52px] rounded-full bg-[#0081FE] flex items-center justify-center cursor-pointer  ">
           <FaArrowUp className="size-[20px]" />
         </button>
       </div>
