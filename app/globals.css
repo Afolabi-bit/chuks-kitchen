@@ -20,6 +20,10 @@
   --breakpoint-xl: 1440px;
 }
 
+body {
+  font-family: var(--font-inter), sans-serif;
+}
+
 .footer {
   background:
     linear-gradient(0deg, rgba(255, 122, 24, 0.3), rgba(255, 122, 24, 0.3)),
