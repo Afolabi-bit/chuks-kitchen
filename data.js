@@ -21,7 +21,7 @@ export const popularCategories = [
   },
   {
     img: "/suya.png",
-    name: "Jollof Delights",
+    name: "Grills & BBQ",
   },
 ];
 

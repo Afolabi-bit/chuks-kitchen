@@ -28,7 +28,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="relative z-50 flex justify-between items-center w-full h-[90px] p-[18px_24px] gap-[20px] md:p-[18px_32px] md:gap-[20px] lg:p-[18px_48px] lg:gap-[28px] xl:p-[18px_48px] xl:gap-[45px]">
+      <header className="relative z-50 flex justify-between items-center w-full h-[41px] md:h-[90px] p-[18px_24px] gap-[20px] md:p-[18px_32px] md:gap-[20px] lg:p-[18px_48px] lg:gap-[28px] xl:p-[18px_48px] xl:gap-[45px]">
         <h2 className="font-island font-medium text-[#FF7A18] leading-[41px] text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40.8px] whitespace-nowrap">
           <Link href="/">Chuks Kitchen</Link>
         </h2>

@@ -9,7 +9,7 @@ export default function Home() {
       <Header />
 
       {/* ── Hero Section ── */}
-      <section className="h-[550px] md:h-[620px] lg:h-[750px] xl:h-[941px] w-full relative">
+      <section className="h-[765px] md:h-[620px] lg:h-[750px] xl:h-[941px] w-full relative">
         <div className="w-full h-full absolute top-0 left-0 z-0">
           <Image
             src="/Home_hero.png"
@@ -19,11 +19,12 @@ export default function Home() {
           />
         </div>
 
-        <div className="w-full h-full absolute top-0 left-0 z-10 bg-[#000000]/45 pt-[160px] md:pt-[190px] lg:pt-[240px] xl:pt-[285px] pl-[24px] md:pl-[32px] lg:pl-[48px] xl:pl-[48px] pr-[24px] md:pr-[32px] lg:pr-0 flex flex-col gap-[24px] md:gap-[24px] lg:gap-[30px] xl:gap-[42px]">
+        <div className="w-full h-full absolute top-0 left-0 z-10 bg-[#000000]/45 pt-[263px] md:pt-[190px] lg:pt-[240px] xl:pt-[285px] pl-[8px] md:pl-[32px] lg:pl-[48px] xl:pl-[48px] pr-[8px] md:pr-[32px] lg:pr-0 flex flex-col gap-[24px] md:gap-[24px] lg:gap-[30px] xl:gap-[42px]">
           <h1 className="font-bold text-white text-[28px] md:text-[34px] lg:text-[40px] xl:text-[48px] leading-[1.27]">
-            The Heart of Nigerian Home <br /> Cooking
+            The Heart of Nigerian Home <br className="hidden md:block" />{" "}
+            Cooking
           </h1>
-          <p className="text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] leading-[1.32] font-bold text-white">
+          <p className="text-[16px] leading-[24px] font-medium md:text-[24px] lg:text-[28px] xl:text-[32px] md:leading-[1.32] md:font-bold text-white">
             Handcrafted with passion, delivered with care.
           </p>
           <button className="w-fit p-[12px_32px] lg:p-[15px_46px] bg-[#FF7A18] rounded-[10px] font-semibold text-[14px] lg:text-[16px] leading-[24px] text-white">
@@ -49,13 +50,15 @@ export default function Home() {
           Popular Categories
         </h2>
 
-        <div className="flex flex-wrap gap-[24px] md:gap-[18px] lg:gap-[28px] xl:gap-[70px] justify-center">
+        <div className="flex flex-col md:flex-row md:flex-wrap gap-[16px] md:gap-[18px] lg:gap-[28px] xl:gap-[70px] md:justify-center">
           {popularCategories.map((category, index) => (
             <div
               key={index}
-              className="w-[calc(50%-16px)] md:w-[220px] lg:w-[280px] xl:w-[390px] h-auto md:h-[260px] lg:h-[330px] xl:h-[393px] bg-white rounded-[8px] flex flex-col items-center"
+              className={`w-full md:w-[220px] lg:w-[280px] xl:w-[390px] h-auto md:h-[260px] lg:h-[330px] xl:h-[393px] bg-white rounded-[8px] flex flex-col items-center ${
+                index >= 3 ? "hidden md:flex" : ""
+              }`}
             >
-              <div className="relative w-full h-[140px] md:h-[150px] lg:h-[190px] xl:h-[222px]">
+              <div className="relative w-full h-[200px] md:h-[150px] lg:h-[190px] xl:h-[222px]">
                 <Image
                   fill
                   src={category.img}
@@ -69,6 +72,10 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        <button className="md:hidden w-full mt-[20px] font-int font-normal text-[16px] leading-[140%] text-center tracking-[-0.02em] text-[#1E88E5]">
+          View All Categories
+        </button>
       </section>
 
       {/* ── Chef's Specials ── */}
@@ -77,13 +84,15 @@ export default function Home() {
           Chef&apos;s Specials
         </h2>
 
-        <div className="flex flex-wrap gap-[24px] md:gap-[18px] lg:gap-[28px] xl:gap-[70px] justify-center">
+        <div className="flex flex-col md:flex-row md:flex-wrap gap-[16px] md:gap-[18px] lg:gap-[28px] xl:gap-[70px] md:justify-center">
           {chefsSpecials.map((special, index) => (
             <div
               key={index}
-              className="w-[calc(50%-16px)] md:w-[220px] lg:w-[280px] xl:w-[390px] h-auto md:h-[340px] lg:h-[410px] xl:h-[487px] bg-white rounded-[8px] flex flex-col items-center"
+              className={`w-full md:w-[220px] lg:w-[280px] xl:w-[390px] h-auto md:h-[340px] lg:h-[410px] xl:h-[487px] bg-white rounded-[8px] flex flex-col items-center ${
+                index >= 3 ? "hidden md:flex" : ""
+              }`}
             >
-              <div className="relative w-full h-[140px] md:h-[150px] lg:h-[190px] xl:h-[222px]">
+              <div className="relative w-full h-[200px] md:h-[150px] lg:h-[190px] xl:h-[222px]">
                 <Image
                   fill
                   src={special.img}
@@ -113,22 +122,26 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        <button className="md:hidden w-full mt-[20px] font-int font-normal text-[16px] leading-[140%] text-center tracking-[-0.02em] text-[#1E88E5]">
+          View All Specials
+        </button>
       </section>
 
       {/* ── CTA / New Menu Section ── */}
-      <section className="w-full h-[420px] md:h-[480px] lg:h-[540px] xl:h-[610px] relative">
+      <section className="w-full h-[656px] md:h-[480px] lg:h-[540px] xl:h-[610px] relative">
         <div className="w-full h-full absolute top-0 left-0 z-0">
           <Image src="/beans.png" alt="beans" fill className="object-cover" />
         </div>
-        <div className="w-full h-full absolute top-0 left-0 z-10 bg-[#000000]/45 py-[100px] md:py-[110px] lg:py-[130px] xl:py-[164px] pl-[24px] md:pl-[32px] lg:pl-[48px] xl:pl-[48px] pr-[24px] md:pr-[32px] lg:pr-0 flex flex-col gap-[10px] md:gap-[12px] lg:gap-[14px]">
-          <h2 className="font-extrabold text-[28px] md:text-[34px] lg:text-[40px] xl:text-[48px] text-white leading-[140%]">
+        <div className="w-full h-full absolute top-0 left-0 z-10 bg-[#000000]/45 py-[60px] md:py-[110px] lg:py-[130px] xl:py-[164px] pl-[20px] md:pl-[32px] lg:pl-[48px] xl:pl-[48px] pr-[20px] md:pr-[32px] lg:pr-0 flex flex-col justify-center md:justify-start gap-[10px] md:gap-[12px] lg:gap-[14px]">
+          <h2 className="font-bold md:font-extrabold text-[32px] leading-[40px] md:text-[34px] lg:text-[40px] xl:text-[48px] text-white md:leading-[140%]">
             Introducing Our New Menu Additions!
           </h2>
-          <p className="font-semibold text-white text-[16px] md:text-[18px] lg:text-[21px] xl:text-[24px] leading-[1.42]">
+          <p className="font-semibold text-white text-[20px] leading-[28px] md:text-[20px] lg:text-[21px] xl:text-[24px] md:leading-[1.42]">
             Explore exciting new dishes, crafted with the freshest ingredients
             and authentic Nigerian flavors. Limited time offer!
           </p>
-          <button className="w-[180px] md:w-[190px] lg:w-[200px] xl:w-[215px] h-[46px] md:h-[48px] lg:h-[50px] xl:h-[54px] bg-[#FF7A18] rounded-[10px] font-semibold text-[14px] lg:text-[16px] leading-[24px] text-white flex justify-center items-center">
+          <button className="w-[180px] md:w-[190px] lg:w-[200px] xl:w-[215px] h-[50px] md:h-[48px] lg:h-[50px] xl:h-[54px] bg-[#FF7A18] rounded-[10px] font-semibold text-[14px] lg:text-[16px] leading-[24px] text-white flex justify-center items-center">
             Discover what&apos;s new
           </button>
         </div>
