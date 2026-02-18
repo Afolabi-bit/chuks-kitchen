@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { popularCategories } from "../data.js";
+import { chefsSpecials, popularCategories } from "../data.js";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -64,7 +65,7 @@ export default function Home() {
       </section>
 
       <section className="py-[139px] px-[55px] ">
-        <h2 className="font-semibold text-center text-[32px] leading-[42px] text-[#1F2937] pb-[50px]">
+        <h2 className="font-bold text-center text-[32px] leading-[42px] text-[#1F2937] pb-[50px]">
           Popular Categories
         </h2>
 
@@ -89,6 +90,70 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <section className="py-[139px] px-[55px] ">
+        <h2 className="font-bold text-center text-[32px] leading-[42px] text-[#1F2937] pb-[50px]">
+          Chef’s Specials
+        </h2>
+
+        <div className="flex flex-wrap gap-[70px] justify-center">
+          {chefsSpecials.map((special, index) => (
+            <div
+              key={index}
+              className="w-[390px] h-[487px] bg-white rounded-[8px] flex flex-col items-center"
+            >
+              <div className="relative w-full h-[222px]">
+                <Image
+                  fill
+                  src={special.img}
+                  alt={special.name}
+                  className="object-cover rounded-[8px_8px_0_0]"
+                />
+              </div>
+              <div className="p-[25px_17px_46px] h-[265px] flex flex-col justify-between">
+                <div>
+                  <h3 className="flex-1  text-[24px] font-medium leading-[34px] text-left text-[#1F2937]">
+                    {special.name}
+                  </h3>
+                  <p className="font-medium text-[16px] leading-[24px] text-[#1F2937]">
+                    {special.desc}
+                  </p>
+                </div>
+
+                <div className="flex justify-between w-full mt-[25px]">
+                  <p className="font-medium text-[16px] leading-[24px] text-[#FF7A18] ">
+                    #3,500
+                  </p>
+                  <button className="w-[160px] h-[54px] bg-[#FF7A18] rounded-[10px] font-semibold text-[16px] leading-[24px] text-white flex justify-center items-center">
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="w-full h-[610px] relative ">
+        <div className="w-full h-full absolute top-0 left-0 z-0">
+          <Image src="/beans.png" alt="beans" fill className="object-cover" />
+        </div>
+        <div className="w-full h-full absolute top-0 left-0 z-10 bg-[#000000]/45 py-[164px] pl-[48px] flex flex-col gap-[10px]">
+          <h2 className="font-extrabold text-[48px] text-white leading-[140%] ">
+            Introducing Our New Menu Additions!
+          </h2>
+          <p className="font-semibold text-white text-[24px] leading-[34px] ">
+            Explore exciting new dishes, crafted with the freshest <br />{" "}
+            ingredients and authentic Nigerian flavors. Limited time <br />{" "}
+            offer!
+          </p>
+          <button className="w-[215px] h-[54px] bg-[#FF7A18] rounded-[10px] font-semibold text-[16px] leading-[24px] text-white flex justify-center items-center ">
+            Discover what’s new
+          </button>
+        </div>
+      </section>
+
+      <Footer />
     </main>
   );
 }
