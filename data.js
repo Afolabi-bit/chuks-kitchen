@@ -58,3 +58,84 @@ export const chefsSpecials = [
     desc: "Rich and savory Egusi soup with assorted meats, paired with freshly pounded yam.",
   },
 ];
+
+export const explorePopular = [
+  {
+    img: "/jollof.png",
+    name: "Jollof Rice & Fried Chicken",
+    desc: "Our signature Jollof rice, served with crispy fried chicken and plantain.",
+    price: "#3,500",
+  },
+  {
+    img: "/eba-egusi.png",
+    name: "Eba & Egusi Soup (Goat Meat)",
+    desc: "Hearty Egusi soup with tender goat meat, served with soft Eba.",
+    price: "#3,500",
+  },
+  {
+    img: "/edikaikong.png",
+    name: "Pounded Yam & Edikaikong",
+    desc: "Traditional pounded yam with rich, leafy Edikaikong soup",
+    price: "#3,800",
+  },
+  {
+    img: "/snail.png",
+    name: "Peppered Snail",
+    desc: "Spicy and savory peppered snail, perfect as a starter.",
+    price: "#2,500",
+  },
+  {
+    img: "/grilled-tilapia.png",
+    name: "Grilled Tilapia Fish",
+    desc: "Whole grilled tilapia seasoned with our special spices.",
+    price: "#4,500",
+  },
+  {
+    img: "/jollof.png",
+    name: "Jollof Rice & Fried Chicken",
+    desc: "Our signature Jollof rice, served with crispy fried chicken and plantain.",
+    price: "#3,500",
+  },
+];
+
+export const entrees = [
+  {
+    img: "/j-smoked-fish.png",
+    name: "Jollof Rice & Smoked Fish",
+    desc: "Flavorful jollof rice served with perfectly smoked fish.Jollof Rice & Smoked Fish",
+    price: "#3,500",
+  },
+  {
+    img: "/jollof.png",
+    name: "Party Jollof Rice (Veg)",
+    desc: "Vegetarian party jollof, full of rich flavors.",
+    price: "#3,500",
+  },
+  {
+    img: "/jollof.png",
+    name: "Party Jollof Rice (Veg)",
+    desc: "Vegetarian party jollof, full of rich flavors.",
+    price: "#3,500",
+  },
+];
+
+export const swallow = [
+  {
+    img: "/amala.png",
+    name: "Amala, Gbegiri & Ewedu (Goat Meat)",
+    desc: "Classic Amala served with Gbegiri (beans) and Ewedu (jute leaf) soup.",
+    price: "#3,500",
+  },
+  {
+    img: "/fufu.png",
+    name: "Fufu & Okra Soup (Fish)",
+    desc: "Light Fufu served with fresh okra soup and tilapia fish.",
+    price: "#3,500",
+  },
+  {
+    img: "/fufu.png",
+    name: "Fufu & Okra Soup (Fish)",
+    desc: "Light Fufu served with fresh okra soup and tilapia fish.",
+    price: "#3,500",
+  },
+];
