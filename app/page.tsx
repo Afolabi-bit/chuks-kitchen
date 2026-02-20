@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { chefsSpecials, popularCategories } from "../data.js";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -50,11 +51,11 @@ export default function Home() {
           Popular Categories
         </h2>
 
-        <div className="flex flex-col md:flex-row md:flex-wrap gap-[16px] md:gap-[18px] lg:gap-[28px] xl:gap-[70px] md:justify-center">
+        <div className="grid grid-cols-3 gap-[48px] max-xl:gap-[28px] max-lg:gap-[18px] max-md:grid-cols-1 max-md:gap-[12px]">
           {popularCategories.map((category, index) => (
             <div
               key={index}
-              className={`w-full md:w-[220px] lg:w-[280px] xl:w-[390px] h-auto md:h-[260px] lg:h-[330px] xl:h-[393px] bg-white rounded-[8px] flex flex-col items-center group hover:-translate-y-1 hover:shadow-lg transition-all duration-200 ${
+              className={`h-auto md:h-[260px] lg:h-[330px] xl:h-[393px] bg-white rounded-[8px] flex flex-col items-center group hover:-translate-y-1 hover:shadow-lg transition-all duration-200 ${
                 index >= 3 ? "hidden md:flex" : ""
               }`}
             >
@@ -84,11 +85,12 @@ export default function Home() {
           Chef&apos;s Specials
         </h2>
 
-        <div className="flex flex-col md:flex-row md:flex-wrap gap-[16px] md:gap-[18px] lg:gap-[28px] xl:gap-[70px] md:justify-center">
+        <div className="grid grid-cols-3 gap-[48px] max-xl:gap-[28px] max-lg:gap-[18px] max-md:grid-cols-1 max-md:gap-[12px]">
           {chefsSpecials.map((special, index) => (
-            <div
+            <Link
+              href={`/food/${special.id}`}
               key={index}
-              className={`w-full md:w-[220px] lg:w-[280px] xl:w-[390px] h-auto md:h-[340px] lg:h-[410px] xl:h-[487px] bg-white rounded-[8px] flex flex-col items-center group hover:-translate-y-1 hover:shadow-lg transition-all duration-200 ${
+              className={`h-auto md:h-[340px] lg:h-[410px] xl:h-[487px] bg-white rounded-[8px] flex flex-col items-center group hover:-translate-y-1 hover:shadow-lg transition-all duration-200 ${
                 index >= 3 ? "hidden md:flex" : ""
               }`}
             >
@@ -112,14 +114,14 @@ export default function Home() {
 
                 <div className="flex justify-between items-center w-full mt-[16px] md:mt-[12px] lg:mt-[16px] xl:mt-[25px]">
                   <p className="font-semibold text-[14px] md:text-[13px] lg:text-[15px] leading-[24px] text-[#FF7A18]">
-                    #3,500
+                    {special.price}
                   </p>
-                  <button className="w-[110px] md:w-[100px] lg:w-[120px] xl:w-[160px] h-[40px] md:h-[34px] lg:h-[40px] xl:h-[54px] bg-[#FF7A18] rounded-[8px] font-semibold text-[13px] md:text-[11px] lg:text-[13px] xl:text-[16px] leading-[24px] text-white flex justify-center items-center">
+                  <span className="w-[110px] md:w-[100px] lg:w-[120px] xl:w-[160px] h-[40px] md:h-[34px] lg:h-[40px] xl:h-[54px] bg-[#FF7A18] rounded-[8px] font-semibold text-[13px] md:text-[11px] lg:text-[13px] xl:text-[16px] leading-[24px] text-white flex justify-center items-center">
                     Add to Cart
-                  </button>
+                  </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

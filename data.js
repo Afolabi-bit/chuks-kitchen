@@ -36,16 +36,19 @@ export const chefsSpecials = [
     id: "cs-1",
     img: "/pepper-soup.png",
     name: "Spicy Tilapia Pepper Soup",
+    price: "#3,500",
     desc: "A comforting and spicy soup with tender tilapia fish, a true Nigerian delicacy.",
   },
   {
     id: "cs-2",
     img: "/jollof.png",
+    price: "#3,500",
     name: "Jollof Rice & Fried Chicken",
     desc: "Our signature Jollof rice, cooked to perfection, served with succulent fried chicken.",
   },
   {
     id: "cs-3",
+    price: "#3,500",
     img: "/jollof.png",
     name: "Jollof Rice & Fried Chicken",
     desc: "Our signature Jollof rice, cooked to perfection, served with succulent fried chicken.",
@@ -53,6 +56,7 @@ export const chefsSpecials = [
   {
     id: "cs-4",
     img: "/jollof.png",
+    price: "#3,500",
     name: "Jollof Rice & Smoked Chicken",
     desc: "Our signature Jollof rice, cooked to perfection, served with succulent smoked chicken.",
   },
@@ -60,12 +64,14 @@ export const chefsSpecials = [
   {
     id: "cs-5",
     img: "/j-and-fried-chicken.png",
+    price: "#3,500",
     name: "Jollof Rice & Fried Chicken",
     desc: "Our signature Jollof rice, cooked to perfection, served with succulent smoked chicken.",
   },
   {
     id: "cs-6",
     img: "/p-and-egusi.png",
+    price: "#3,500",
     name: "Egusi Soup & Pounded Yam",
     desc: "Rich and savory Egusi soup with assorted meats, paired with freshly pounded yam.",
   },

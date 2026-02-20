@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   chefsSpecials,
   entrees,
@@ -50,7 +51,8 @@ export default function Explore() {
 
         <div className="grid grid-cols-3 gap-[48px] max-xl:gap-[28px] max-lg:gap-[18px] max-md:grid-cols-1 max-md:gap-[12px]">
           {explorePopular.map((item) => (
-            <div
+            <Link
+              href={`/food/${item.id}`}
               key={item.id}
               className="h-[465px] max-xl:h-[410px] max-lg:h-[340px] max-md:h-[111px] bg-white rounded-[8px] flex flex-col max-md:flex-row items-center group hover:-translate-y-1 hover:shadow-lg transition-all duration-200"
             >
@@ -76,15 +78,15 @@ export default function Explore() {
                   <p className="font-semibold text-[15px] max-lg:text-[13px] max-md:text-[13px] leading-[24px] text-[#FF7A18]">
                     {item.price}
                   </p>
-                  <button
+                  <span
                     className="w-[40px] h-[40px] max-lg:w-[34px] max-lg:h-[34px] max-md:w-[30px] max-md:h-[30px] bg-[#FF7A18] rounded-full flex justify-center items-center hover:bg-[#E86B10] active:scale-95 transition-all"
                     aria-label="Add to cart"
                   >
                     <img src="/plus.svg" alt="plus" />
-                  </button>
+                  </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -104,7 +106,8 @@ export default function Explore() {
 
         <div className="grid grid-cols-3 gap-[48px] max-xl:gap-[28px] max-lg:gap-[18px] max-md:grid-cols-1 max-md:gap-[12px]">
           {entrees.map((item) => (
-            <div
+            <Link
+              href={`/food/${item.id}`}
               key={item.id}
               className="h-[465px] max-xl:h-[410px] max-lg:h-[340px] max-md:h-[111px] bg-white rounded-[8px] flex flex-col max-md:flex-row items-center group hover:-translate-y-1 hover:shadow-lg transition-all duration-200"
             >
@@ -130,15 +133,15 @@ export default function Explore() {
                   <p className="font-semibold text-[15px] max-lg:text-[13px] max-md:text-[13px] leading-[24px] text-[#FF7A18]">
                     {item.price}
                   </p>
-                  <button
+                  <span
                     className="w-[40px] h-[40px] max-lg:w-[34px] max-lg:h-[34px] max-md:w-[30px] max-md:h-[30px] bg-[#FF7A18] rounded-full flex justify-center items-center hover:bg-[#E86B10] active:scale-95 transition-all"
                     aria-label="Add to cart"
                   >
                     <img src="/plus.svg" alt="plus" />
-                  </button>
+                  </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -158,7 +161,8 @@ export default function Explore() {
 
         <div className="grid grid-cols-3 gap-[48px] max-xl:gap-[28px] max-lg:gap-[18px] max-md:grid-cols-1 max-md:gap-[12px]">
           {swallow.map((item) => (
-            <div
+            <Link
+              href={`/food/${item.id}`}
               key={item.id}
               className="h-[465px] max-xl:h-[410px] max-lg:h-[340px] max-md:h-[111px] bg-white rounded-[8px] flex flex-col max-md:flex-row items-center group hover:-translate-y-1 hover:shadow-lg transition-all duration-200"
             >
@@ -184,15 +188,15 @@ export default function Explore() {
                   <p className="font-semibold text-[15px] max-lg:text-[13px] max-md:text-[13px] leading-[24px] text-[#FF7A18]">
                     {item.price}
                   </p>
-                  <button
+                  <span
                     className="w-[40px] h-[40px] max-lg:w-[34px] max-lg:h-[34px] max-md:w-[30px] max-md:h-[30px] bg-[#FF7A18] rounded-full flex justify-center items-center hover:bg-[#E86B10] active:scale-95 transition-all"
                     aria-label="Add to cart"
                   >
                     <img src="/plus.svg" alt="plus" />
-                  </button>
+                  </span>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
