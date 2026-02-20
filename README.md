@@ -37,14 +37,18 @@ chuks-kitchen/
 │   ├── page.tsx             # Home page
 │   ├── explore/
 │   │   └── page.tsx         # Explore / menu page
+│   ├── food/
+│   │   └── [id]/
+│   │       └── page.tsx     # Food detail page (dynamic route)
 │   ├── onboarding/
 │   │   └── page.tsx         # Landing / onboarding page
 │   └── auth/
 │       └── page.tsx         # Login & create account page
 ├── components/
-│   ├── Header.tsx           # Responsive header with mobile slide-out nav
+│   ├── Header.tsx           # Responsive header with mobile slide-out nav & optional bg prop
 │   ├── Footer.tsx           # Global footer with back-to-top button
-│   └── MenuCategories.tsx   # Interactive category sidebar (client component)
+│   ├── MenuCategories.tsx   # Interactive category sidebar (client component)
+│   └── FoodDetailsForm.tsx  # Food detail form with protein/sides/instructions (client component)
 ├── data.js                  # Static data arrays for menus & categories
 └── public/                  # Images, icons, and static assets
 ```
@@ -58,7 +62,7 @@ The main landing page showcasing the restaurant's offerings. It features:
 - **Full-width hero** — background image with dark overlay, heading, subtitle, and "Discover what's new" CTA
 - **Floating search bar** — positioned overlapping the hero bottom with a search icon and styled placeholder
 - **Popular Categories** — responsive grid of 6 category cards (3 hidden on mobile) with food images and labels
-- **Chef's Specials** — 6 dish cards with images, descriptions, prices, and "Add to Cart" buttons
+- **Chef's Specials** — 6 dish cards with images, descriptions, prices, and "Add to Cart" buttons; each card links to its food detail page (`/food/[id]`)
 - **CTA banner** — full-width promotional section with background image, heading, and call-to-action
 - **Responsive design** — scales across mobile, tablet, laptop, and 1440px desktop with per-breakpoint sizing
 
@@ -68,10 +72,21 @@ The menu exploration page with category filtering and food cards. It features:
 
 - **Hero section** — full-width background image with dark overlay, restaurant name, and tagline; height and text scale across breakpoints
 - **Menu Categories** — interactive sidebar with 7 clickable categories; active category highlighted with orange background and left accent bar; clicking a category smooth-scrolls to its section
-- **Popular section** — responsive 3-column grid of food cards with images, descriptions, prices, and add-to-cart buttons
-- **Jollof Rice & Entrees** — 3-column grid of entree cards
-- **Swallow & Soups** — 3-column grid of soup/swallow cards
+- **Popular section** — responsive 3-column grid of food cards with images, descriptions, prices, and add-to-cart buttons; each card links to its food detail page (`/food/[id]`)
+- **Jollof Rice & Entrees** — 3-column grid of entree cards, each linking to its detail page
+- **Swallow & Soups** — 3-column grid of soup/swallow cards, each linking to its detail page
 - **Responsive grid** — switches from 3-column to single-column on mobile with horizontal card layout
+
+### Food Detail (`/food/[id]`)
+
+A dynamic detail page for each food item. It features:
+
+- **Split layout** — left full-height food image (661px) + right detail panel with white card
+- **White header** — uses the Header component with `bg="white"` prop
+- **"← Back to Menu" link** — navigates back to the explore page
+
+- **Dynamic routing** — looks up food by ID across all data arrays (`chefsSpecials`, `explorePopular`, `entrees`, `swallow`)
+- **404 fallback** — shows "Food Not Found" with a link back to the menu
 
 ### Onboarding (`/onboarding`)
 
@@ -128,6 +143,7 @@ Beyond the original Figma design, the following adjustments were made during dev
 ### Home Page
 
 - **Card hover effects** — lift, shadow, and image zoom micro-animations on both Popular Categories and Chef's Specials cards
+- **Card linking** — Chef's Specials cards are wrapped with `Link` to navigate to `/food/[id]`
 
 ### Auth Page
 
@@ -137,6 +153,12 @@ Beyond the original Figma design, the following adjustments were made during dev
 
 - **Menu Categories** — interactive client component with click-to-highlight category selection
 - **Card hover effects** — lift, shadow, and image zoom micro-animations added for a modern feel
+- **Card linking** — all food cards (Popular, Entrees, Swallow) are wrapped with `Link` to navigate to `/food/[id]`
+
+### Food Detail Page
+
+- **FoodDetailsForm** — client component managing protein selection (radio), extra sides (checkboxes), and special instructions (textarea)
+- **Back to Menu link** — replaces close button with a styled `← Back to Menu` link to `/explore`
 
 ## Fonts
 

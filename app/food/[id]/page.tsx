@@ -8,6 +8,7 @@ import {
 } from "../../../data.js";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FoodDetailsForm from "@/components/FoodDetailsForm";
 
 // Combine all food arrays into one lookup
 const allFoods = [...chefsSpecials, ...explorePopular, ...entrees, ...swallow];
@@ -51,8 +52,8 @@ export default async function FoodDetail({
     <main className="font-int bg-[#F3F4F6] min-h-screen">
       <Header bg="white" />
 
-      <section className="w-full h-[1061px] flex">
-        <div className="relative w-[661px] h-full ">
+      <section className="flex  w-full h-[1061px]">
+        <div className="relative w-[661px] h-full">
           <Image
             src={food.img}
             alt={food.name}
@@ -60,14 +61,15 @@ export default async function FoodDetail({
             className="object-cover object-center"
           />
         </div>
-        <div className="w-[calc(100%-661px)] h-full bg-[#F3F4F6] p-[15px_55px_24px_41px] ">
-          <div className="flex flex-col bg-white w-full h-full">
-            <div className="flex flex-col gap-[16px]">
-              <h1 className="text-[32px] font-bold text-[#1F2937]">
-                {food.name}
-              </h1>
-              <p className="text-[16px] text-[#6B7280]">{food.desc}</p>
-            </div>
+
+        {/* Food details */}
+        <div className="flex-1 h-full bg-[#F3F4F6] p-[15px_55px_24px_41px] flex items-center justify-center">
+          <div className="w-[683px] h-[1031.09px] flex flex-col items-end p-[19px_17px] gap-[4px] bg-white rounded-[4px] overflow-y-auto">
+            <FoodDetailsForm
+              name={food.name}
+              price={food.price}
+              desc={food.desc}
+            />
           </div>
         </div>
       </section>
