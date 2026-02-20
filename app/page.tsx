@@ -1,3 +1,11 @@
+/**
+ * Home Page (/)
+ *
+ * The main landing page for Chuks Kitchen. It showcases the restaurant's
+ * offerings through a hero banner, search bar, popular food categories,
+ * featured chef's specials, and a promotional CTA section.
+ */
+
 import Image from "next/image";
 import Link from "next/link";
 import { chefsSpecials, popularCategories } from "../data.js";
@@ -33,6 +41,7 @@ export default function Home() {
           </button>
         </div>
 
+        {/* Search bar -- floats overlapping the bottom of the hero */}
         <form className="bg-white absolute w-[90%] md:w-[85%] lg:w-[80%] xl:w-[1069px] h-[60px] md:h-[66px] lg:h-[72px] xl:h-[78px] z-20 left-1/2 -translate-x-1/2 bottom-[-30px] md:bottom-[-33px] lg:bottom-[-36px] xl:bottom-[-39px] rounded-[8px] p-[12px] md:p-[14px] lg:p-[16px] flex gap-[12px] md:gap-[14px] lg:gap-[16px] justify-center items-center shadow-[0px_6px_30px_5px_rgba(0,0,0,0.12)]">
           <div className="flex justify-center items-center size-[36px] md:size-[40px] lg:size-[44px] xl:size-[46px]">
             <img src="/search-icon.png" alt="search" />
@@ -51,6 +60,8 @@ export default function Home() {
           Popular Categories
         </h2>
 
+        {/* Category cards grid -- 3 columns on desktop, 1 column on mobile.
+            Cards beyond the first 3 are hidden on mobile. */}
         <div className="grid grid-cols-3 gap-[48px] max-xl:gap-[28px] max-lg:gap-[18px] max-md:grid-cols-1 max-md:gap-[12px]">
           {popularCategories.map((category, index) => (
             <div
@@ -85,6 +96,8 @@ export default function Home() {
           Chef&apos;s Specials
         </h2>
 
+        {/* Specials card grid -- each card links to /food/[id].
+            Cards beyond the first 3 are hidden on mobile. */}
         <div className="grid grid-cols-3 gap-[48px] max-xl:gap-[28px] max-lg:gap-[18px] max-md:grid-cols-1 max-md:gap-[12px]">
           {chefsSpecials.map((special, index) => (
             <Link

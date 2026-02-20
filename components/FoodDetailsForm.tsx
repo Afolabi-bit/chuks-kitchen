@@ -1,14 +1,27 @@
+/**
+ * FoodDetailsForm Component
+ *
+ * A client-side form displayed on the Food Detail page.
+ * Allows users to customize their order by choosing a protein,
+ * selecting extra sides, and adding special instructions.
+ *
+ * Receives the food's name, price, and description as props.
+ * Responsive styling scales from mobile through desktop breakpoints.
+ */
+
 "use client";
 
 import { useState } from "react";
 import Link from "next/link";
 
+// Available protein options -- the first item is the default choice
 const proteins = [
   { name: "Fried Chicken", price: null, label: "(Default)" },
   { name: "Grilled Fish", price: "+₦500" },
   { name: "Beef", price: "+₦700" },
 ];
 
+// Optional side dishes the user can add to their order
 const sides = [
   { name: "Fried Plantain", price: "+₦700" },
   { name: "Coleslaw", price: "+₦500" },
@@ -26,10 +39,11 @@ export default function FoodDetailsForm({
   price,
   desc,
 }: FoodDetailsFormProps) {
-  const [selectedProtein, setSelectedProtein] = useState(0);
-  const [selectedSides, setSelectedSides] = useState<number[]>([]);
-  const [instructions, setInstructions] = useState("");
+  const [selectedProtein, setSelectedProtein] = useState(0); // Index of the chosen protein
+  const [selectedSides, setSelectedSides] = useState<number[]>([]); // Indices of selected sides
+  const [instructions, setInstructions] = useState(""); // Free-text special instructions
 
+  // Toggles a side dish on or off in the selectedSides array
   const toggleSide = (index: number) => {
     setSelectedSides((prev) =>
       prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index],
@@ -38,7 +52,7 @@ export default function FoodDetailsForm({
 
   return (
     <>
-      {/* Back to Menu */}
+      {/* Navigation link back to the Explore / menu page */}
       <Link
         href="/explore"
         className="self-end font-int font-medium text-[16px] leading-[140%] tracking-[-0.02em] text-[#1E88E5] hover:text-[#1565C0] transition-colors"
@@ -46,7 +60,7 @@ export default function FoodDetailsForm({
         ← Back to Menu
       </Link>
 
-      {/* Main content */}
+      {/* Main content -- food info, tags, protein, sides, and instructions */}
       <div className="flex flex-col items-start w-full gap-[32px] max-lg:gap-[28px] max-md:gap-[24px]">
         {/* Food info */}
         <div className="flex flex-col items-start w-full gap-[8px]">

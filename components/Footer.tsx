@@ -1,3 +1,12 @@
+/**
+ * Footer Component
+ *
+ * Site-wide footer displayed at the bottom of every page.
+ * Contains four columns: brand description, quick links, contact info,
+ * and social media links. Below the columns is a copyright bar with
+ * legal links and a back-to-top button.
+ */
+
 "use client";
 
 import { FaArrowUp } from "react-icons/fa6";
@@ -5,7 +14,9 @@ import { FaArrowUp } from "react-icons/fa6";
 export default function Footer() {
   return (
     <footer className=" footer flex flex-col items-center text-center w-full h-auto xl:h-[449px] py-[40px] md:py-[65px] gap-[4px] ">
+      {/* Four-column layout -- brand, quick links, contact, social */}
       <div className="flex flex-row flex-wrap  md:flex-nowrap lg:justify-between xl:justify-center items-start px-6 md:px-10 lg:px-20 gap-8 lg:gap-[60px] xl:gap-[101px] ">
+        {/* Column 1: Brand name and tagline */}
         <div className="flex flex-col items-start w-full lg:w-[22%]  xl:w-[229.25px] h-auto xl:h-[218px] ">
           <h2 className="font-island text-[#FF7A18] leading-[37px] text-[32px] md:text-[24px] lg:text-[37px] ">
             Chuks Kitchen
@@ -16,6 +27,7 @@ export default function Footer() {
           </p>
         </div>
 
+        {/* Column 2: Quick navigation links */}
         <div className="flex flex-col items-start w-full lg:w-fit  xl:w-[229.25px] h-auto xl:h-[218px] ">
           <h2 className="font-jost text-[#FFFFFF] md:text-[16px] lg:text-[24px] leading-[36px] text-left ">
             Quick Links
@@ -64,6 +76,7 @@ export default function Footer() {
           </ul>
         </div>
 
+        {/* Column 3: Contact information */}
         <div className="flex flex-col items-start w-full lg:w-fit  xl:w-[229.25px] h-auto xl:h-[218px] ">
           <h2 className="font-jost text-[#FFFFFF]  md:text-[16px] lg:text-[24px] leading-[36px] text-left ">
             Contact Us
@@ -96,6 +109,7 @@ export default function Footer() {
           </ul>
         </div>
 
+        {/* Column 4: Social media links */}
         <div className="flex flex-col items-start w-full lg:w-fit  xl:w-[229.25px] h-auto xl:h-[218px] ">
           <h2 className="font-jost text-[#FFFFFF] text-[16px] lg:text-[24px] leading-[36px] text-left ">
             Follow Us
@@ -137,6 +151,7 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Bottom bar -- copyright text, legal links, and back-to-top button */}
       <div className="mt-[36px] flex justify-between items-center w-full px-6 md:px-10 lg:px-20 xl:px-[110px] ">
         <p className=" text-[10px] text-left ">
           <span className="font-poppins lg:text-[12px] leading-[20px] text-[#FFFFFF]/65">

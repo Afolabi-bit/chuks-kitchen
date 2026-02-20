@@ -1,3 +1,18 @@
+/**
+ * Static Food Data
+ *
+ * All menu items and categories for the application are defined here
+ * as exported arrays. Each food item includes an id, image path, name,
+ * description, and price. This data is used across the Home, Explore,
+ * and Food Detail pages.
+ *
+ * No backend or database is required -- this file serves as the
+ * single source of truth for all menu content.
+ */
+
+// -- Popular Categories --
+// Displayed on the Home page as a grid of category cards.
+// Each category has an id, image, and display name.
 export const popularCategories = [
   {
     id: "pc-1",
@@ -31,6 +46,9 @@ export const popularCategories = [
   },
 ];
 
+// -- Chef's Specials --
+// Featured dishes shown on the Home page.
+// Each card links to its Food Detail page via the id field.
 export const chefsSpecials = [
   {
     id: "cs-1",
@@ -77,6 +95,8 @@ export const chefsSpecials = [
   },
 ];
 
+// -- Explore: Popular Items --
+// Shown in the "Popular" section of the Explore page.
 export const explorePopular = [
   {
     id: "ep-1",
@@ -122,6 +142,8 @@ export const explorePopular = [
   },
 ];
 
+// -- Explore: Jollof Rice and Entrees --
+// Shown in the "Jollof Rice & Entrees" section of the Explore page.
 export const entrees = [
   {
     id: "en-1",
@@ -146,6 +168,8 @@ export const entrees = [
   },
 ];
 
+// -- Explore: Swallow and Soups --
+// Shown in the "Swallow & Soups" section of the Explore page.
 export const swallow = [
   {
     id: "sw-1",
@@ -170,6 +194,10 @@ export const swallow = [
   },
 ];
 
+// -- Menu Categories --
+// Used by the MenuCategories sidebar on the Explore page.
+// Each category has an id, display name, and a sectionId that
+// corresponds to the HTML id of the section it links to for smooth scrolling.
 export const menuCategories = [
   { id: "mc-1", name: "Popular", sectionId: "popular" },
   { id: "mc-2", name: "Jollof Rice & Entrees", sectionId: "entrees" },

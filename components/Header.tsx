@@ -1,9 +1,21 @@
+/**
+ * Header Component
+ *
+ * A responsive navigation header used across all pages.
+ * - Desktop (md+): horizontal nav links, brand name, and Login button.
+ * - Mobile: animated hamburger icon that opens a full-screen slide-out menu.
+ *
+ * Accepts an optional `bg` prop set to "white" for pages that need
+ * a solid white header background (e.g. the Food Detail page).
+ */
+
 "use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 
+// Navigation links rendered in both desktop and mobile menus
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Explore", href: "/explore" },
@@ -12,13 +24,15 @@ const navLinks = [
 ];
 
 export default function Header({ bg }: { bg?: "white" }) {
-  const pathname = usePathname();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname(); // Current route, used for active link highlighting
+  const [menuOpen, setMenuOpen] = useState(false); // Controls mobile menu visibility
 
+  // Close the mobile menu whenever the route changes
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
 
+  // Prevent body scrolling while the mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => {
@@ -35,6 +49,7 @@ export default function Header({ bg }: { bg?: "white" }) {
           <Link href="/">Chuks Kitchen</Link>
         </h2>
 
+        {/* Desktop navigation links -- hidden on mobile */}
         <ul className="hidden md:flex flex-1 items-center justify-center gap-[8px] p-[10px] md:gap-[10px]">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
@@ -51,11 +66,12 @@ export default function Header({ bg }: { bg?: "white" }) {
           })}
         </ul>
 
+        {/* Desktop login button -- hidden on mobile */}
         <button className="hidden md:flex p-[12px_28px] md:p-[12px_32px] lg:p-[14px_40px] xl:p-[15px_46px] w-[120px] md:w-[130px] lg:w-[145px] xl:w-[160px] h-[46px] md:h-[48px] lg:h-[50px] xl:h-[54px] bg-[#FF7A18] rounded-[10px] font-semibold text-[14px] lg:text-[16px] leading-[24px] text-white justify-center items-center">
           Login
         </button>
 
-        {/* Hamburger / X toggle — mobile only */}
+        {/* Hamburger / X toggle -- mobile only, animated with CSS transforms */}
         <button
           className="flex md:hidden flex-col justify-center items-center w-[40px] h-[40px] relative"
           aria-label={menuOpen ? "Close menu" : "Open menu"}

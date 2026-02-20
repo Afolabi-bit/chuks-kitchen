@@ -1,3 +1,12 @@
+/**
+ * Onboarding Page (/onboarding)
+ *
+ * The landing page that introduces users to Chuks Kitchen.
+ * Features a split layout with a hero image on the left (desktop only)
+ * and a content panel on the right with the brand name, tagline,
+ * feature highlights, and two CTA buttons.
+ */
+
 "use client";
 
 import Footer from "@/components/Footer";
@@ -7,8 +16,9 @@ import { FaCartShopping } from "react-icons/fa6";
 export default function Onboarding() {
   return (
     <main className="font-int">
+      {/* Hero split layout -- image on left, content on right */}
       <section className=" md:flex min-h-screen xl:h-[1024px]">
-        {/* image */}
+        {/* Left panel -- hero image, visible only on lg and above */}
         <div className="hidden lg:block lg:h-auto lg:w-[45%] xl:w-[50%] h-full relative">
           <Image
             src="/onboarding-desktop.png"
@@ -17,6 +27,7 @@ export default function Onboarding() {
             className="w-full h-full object-cover"
           />
         </div>
+        {/* Right panel -- brand name, mobile hero image, feature list, and CTAs */}
         <div className="w-full lg:w-[55%] xl:w-[50%] h-full relative flex flex-col  py-[28px]  lg:pl-[50px] lg:pr-[40px] xl:pl-[78px] xl:pr-[60px] ">
           <div className="flex justify-between items-center w-full px-[20px] lg:px-0 xl:w-[574px]">
             <h2 className="font-island font-medium text-[#FF7A18] leading-[41px] text-[32px] sm:text-[40.8px] ">
@@ -27,6 +38,7 @@ export default function Onboarding() {
             </button>
           </div>
 
+          {/* Mobile hero image -- shown below the logo on smaller screens, hidden on lg+ */}
           <div className="block lg:hidden mt-[28px] h-[300px] w-full relative">
             <img
               src="/onboarding-mobile.png"
@@ -45,6 +57,7 @@ export default function Onboarding() {
               We bring the rich culinary heritage of Nigeria right to your
               doorstep.
             </p>
+            {/* Feature highlights -- three selling points with icons */}
             <ul className="flex flex-wrap gap-[19px_32px] xl:gap-[19px_70px] items-center align-content-start mb-[36px]">
               <li className="flex items-center gap-[11px] p-[6px_9px] w-full h-[56px] bg-[#F3F4F6] rounded-[13px] ">
                 <span className="w-[44px] h-[44px] bg-[#FFE1C4] rounded-[13px] flex items-center justify-center ">
@@ -82,7 +95,7 @@ export default function Onboarding() {
               </li>
             </ul>
 
-            {/* buttons */}
+            {/* CTA buttons -- primary (Start Your Order) and secondary (Learn More) */}
             <div className="flex flex-col gap-[31px]">
               <button className="w-full h-[50px] xl:h-[60px] bg-[#FF7A18] rounded-[10px] text-white font-semibold text-[16px] leading-[24px] transition-all duration-150 hover:bg-[#E56A0E] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF7A18] focus-visible:ring-offset-2 cursor-pointer ">
                 Start Your Order

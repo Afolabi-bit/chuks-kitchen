@@ -1,3 +1,12 @@
+/**
+ * Explore Page (/explore)
+ *
+ * The menu exploration page where users browse food items by category.
+ * Features a hero banner, an interactive MenuCategories sidebar, and
+ * three food sections: Popular, Jollof Rice & Entrees, and Swallow & Soups.
+ * Each food card links to its corresponding Food Detail page.
+ */
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -49,6 +58,8 @@ export default function Explore() {
           Popular
         </h2>
 
+        {/* Food card grid -- 3 columns on desktop, single column horizontal cards on mobile.
+            Each card links to the food detail page via /food/[id]. */}
         <div className="grid grid-cols-3 gap-[48px] max-xl:gap-[28px] max-lg:gap-[18px] max-md:grid-cols-1 max-md:gap-[12px]">
           {explorePopular.map((item) => (
             <Link

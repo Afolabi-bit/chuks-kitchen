@@ -1,3 +1,12 @@
+/**
+ * Auth Page (/auth)
+ *
+ * Handles both Login and Create Account flows on a single page.
+ * Uses client-side state to toggle between the two forms.
+ * Features a split layout with a branded hero panel on the left
+ * (desktop only) and the active form on the right.
+ */
+
 "use client";
 
 import Footer from "@/components/Footer";
@@ -5,11 +14,13 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Auth() {
+  // Tracks which form is displayed: "login" or "create"
   const [form, setForm] = useState("login");
   return (
     <main className="font-int">
+      {/* Page wrapper -- split layout with hero image and form panel */}
       <section className=" md:flex min-h-screen xl:h-[1024px]">
-        {/* image */}
+        {/* Left panel -- hero image with orange overlay and welcome text (lg+ only) */}
         <div className="hidden lg:block lg:h-auto lg:w-[45%] xl:w-[50%] h-full relative">
           <Image
             src="/onboarding-desktop.png"
@@ -31,6 +42,7 @@ export default function Auth() {
           </div>
         </div>
 
+        {/* Right panel -- Login form (shown when form === "login") */}
         {form === "login" && (
           <div className="w-full bg-[#F3F4F6] lg:w-[55%] xl:w-[50%] h-full relative flex flex-col  pt-[60px] pb-[80px] px-[16px] md:pt-[140px] md:pb-[120px] md:px-[40px] lg:pt-[208px] lg:pb-[197px] lg:px-[40px] xl:pl-[133px] xl:pr-[127px] items-center xl:items-start ">
             {/*  */}
@@ -136,6 +148,7 @@ export default function Auth() {
           </div>
         )}
 
+        {/* Right panel -- Create Account form (shown when form === "create") */}
         {form === "create" && (
           <div className="w-full bg-[#F3F4F6] lg:w-[55%] xl:w-[50%] h-full relative flex flex-col pt-[60px] pb-[60px] px-[16px] md:pt-[80px] md:pb-[80px] md:px-[40px] lg:pt-[94px] lg:pb-[108px] lg:px-[40px] xl:pl-[133px] xl:pr-[127px] items-center xl:items-start ">
             {/*  */}
