@@ -47,12 +47,12 @@ export default function FoodDetailsForm({
       </Link>
 
       {/* Main content */}
-      <div className="flex flex-col items-start w-full gap-[37px]">
+      <div className="flex flex-col items-start w-full gap-[32px] max-lg:gap-[28px] max-md:gap-[24px]">
         {/* Food info */}
-        <div className="flex flex-col items-start w-full gap-[18px]">
+        <div className="flex flex-col items-start w-full gap-[8px]">
           {/* Name + Price */}
           <div className="flex flex-col items-start w-full gap-[11px]">
-            <h1 className="font-int font-bold text-[32px] leading-[42px] text-black w-full">
+            <h1 className="font-int font-bold max-md:font-semibold text-[32px] max-lg:text-[28px] max-md:text-[24px] leading-[42px] max-lg:leading-[36px] max-md:leading-[32px] text-black w-full">
               {name}
             </h1>
             {price && (
@@ -70,10 +70,10 @@ export default function FoodDetailsForm({
           )}
         </div>
 
-        {/* Tags row */}
-        <div className="flex flex-row items-start p-[10px] gap-[10px] w-full">
+        {/* Tags row — desktop: inline row, mobile: flex-wrap pills */}
+        <div className="flex flex-row flex-wrap items-start p-[10px_0px] max-md:p-[10px_0px] gap-[14px] max-md:gap-[10px] w-full">
           {/* Mildly spicy */}
-          <div className="flex flex-row flex-wrap items-center gap-[9px]">
+          <div className="flex flex-row items-center gap-[9px] max-md:bg-[#F3F4F6] max-md:rounded-[8px] max-md:p-[4px_6px]">
             <svg
               width="24"
               height="24"
@@ -91,8 +91,8 @@ export default function FoodDetailsForm({
             </span>
           </div>
 
-          {/* Vegetarian option */}
-          <div className="flex flex-row flex-wrap items-center gap-[12px] flex-1">
+          {/* View Allergies */}
+          <div className="flex flex-row items-center gap-[12px] max-md:bg-[#F3F4F6] max-md:rounded-[8px] max-md:p-[4px_6px]">
             <svg
               width="24"
               height="24"
@@ -105,13 +105,13 @@ export default function FoodDetailsForm({
                 fill="#FF7A18"
               />
             </svg>
-            <span className="font-int font-normal text-[16px] leading-[140%] tracking-[-0.02em] text-[#4B5563] flex-1">
-              Vegetarian option available
+            <span className="font-int font-normal text-[16px] leading-[140%] tracking-[-0.02em] text-[#1E88E5] cursor-pointer">
+              View Allergies
             </span>
           </div>
 
-          {/* View Allergies */}
-          <div className="flex flex-row flex-wrap items-center gap-[12px] flex-1">
+          {/* Vegetarian option */}
+          <div className="flex flex-row items-center gap-[9px] max-md:bg-[#F3F4F6] max-md:rounded-[8px] max-md:p-[4px_6px]">
             <svg
               width="24"
               height="24"
@@ -124,16 +124,16 @@ export default function FoodDetailsForm({
                 fill="#FF7A18"
               />
             </svg>
-            <span className="font-int font-normal text-[16px] leading-[140%] tracking-[-0.02em] text-[#1E88E5] flex-1 cursor-pointer">
-              View Allergies
+            <span className="font-int font-normal text-[16px] leading-[140%] tracking-[-0.02em] text-[#4B5563]">
+              Vegetarian option available
             </span>
           </div>
         </div>
       </div>
 
       {/* Choose Your Protein */}
-      <div className="flex flex-col items-start py-[10px] gap-[19px] w-full">
-        <h2 className="font-int font-medium text-[24px] leading-[34px] text-black">
+      <div className="flex flex-col items-start py-[10px] gap-[19px] max-md:gap-[13px] w-full">
+        <h2 className="font-int font-medium max-md:font-semibold text-[24px] max-lg:text-[22px] leading-[34px] max-lg:leading-[32px] max-md:leading-[32px] text-black max-md:text-[#1F2937]">
           Choose Your Protein
         </h2>
 
@@ -141,19 +141,19 @@ export default function FoodDetailsForm({
           <button
             key={protein.name}
             onClick={() => setSelectedProtein(index)}
-            className="flex flex-row justify-between items-center p-[8px_11px] w-full h-[49.36px] border border-[#BDBDBD] rounded-[8px] cursor-pointer"
+            className="flex flex-row justify-between items-center p-[8px_11px] w-full h-[49.36px] max-lg:h-[46px] max-md:h-[44px] border border-[#BDBDBD] rounded-[8px] cursor-pointer"
           >
             <div className="flex flex-row items-center gap-[8px]">
               {/* Radio circle */}
               <div
-                className={`w-[33.36px] h-[33.36px] rounded-full flex items-center justify-center p-[6px] ${
+                className={`w-[33.36px] h-[33.36px] max-lg:w-[30px] max-lg:h-[30px] max-md:w-[28px] max-md:h-[28px] rounded-full flex items-center justify-center p-[6px] max-md:p-[5px] ${
                   selectedProtein === index
                     ? "bg-[#FF7A18]"
                     : "bg-white border border-[#BDBDBD]"
                 }`}
               >
                 <div
-                  className={`w-[21.36px] h-[21.36px] rounded-full ${
+                  className={`w-[21.36px] h-[21.36px] max-lg:w-[18px] max-lg:h-[18px] max-md:w-[17.93px] max-md:h-[17.93px] rounded-full ${
                     selectedProtein === index ? "bg-white" : ""
                   }`}
                 />
@@ -170,8 +170,8 @@ export default function FoodDetailsForm({
       </div>
 
       {/* Extra Sides (Optional) */}
-      <div className="flex flex-col items-start py-[10px] gap-[19px] w-full">
-        <h2 className="font-int font-medium text-[24px] leading-[34px] text-black">
+      <div className="flex flex-col items-start py-[10px] gap-[19px] max-md:gap-[13px] w-full">
+        <h2 className="font-int font-medium text-[24px] max-lg:text-[22px] leading-[34px] max-lg:leading-[32px] text-black">
           Extra Sides (Optional)
         </h2>
 
@@ -179,12 +179,12 @@ export default function FoodDetailsForm({
           <button
             key={side.name}
             onClick={() => toggleSide(index)}
-            className="flex flex-row justify-between items-center p-[8px_11px] w-full h-[49.36px] border border-[#BDBDBD] rounded-[8px] cursor-pointer"
+            className="flex flex-row justify-between items-center p-[8px_11px] w-full h-[49.36px] max-lg:h-[46px] max-md:h-[44px] border border-[#BDBDBD] rounded-[8px] cursor-pointer"
           >
             <div className="flex flex-row items-center gap-[8px]">
               {/* Checkbox */}
               <div
-                className={`w-[33.36px] h-[33.36px] rounded-[12px] flex items-center justify-center p-[6px] ${
+                className={`w-[33.36px] h-[33.36px] max-lg:w-[30px] max-lg:h-[30px] max-md:w-[28px] max-md:h-[28px] rounded-[12px] flex items-center justify-center p-[6px] max-md:p-[5px] ${
                   selectedSides.includes(index)
                     ? "bg-[#FF7A18]"
                     : "bg-white border border-[#BDBDBD]"
@@ -217,15 +217,15 @@ export default function FoodDetailsForm({
       </div>
 
       {/* Special Instructions */}
-      <div className="flex flex-col items-start gap-[19px] w-full">
-        <h2 className="font-int font-medium text-[24px] leading-[34px] text-black w-full">
+      <div className="flex flex-col items-start gap-[19px] max-md:gap-[13px] w-full">
+        <h2 className="font-int font-medium text-[24px] max-lg:text-[22px] leading-[34px] max-lg:leading-[32px] text-black w-full">
           Special Instructions
         </h2>
         <textarea
           value={instructions}
           onChange={(e) => setInstructions(e.target.value)}
           placeholder="E.g no onion, extra spicy, less salt..."
-          className="w-full h-[112px] border border-[#BDBDBD] rounded-[8px] p-[10px_10px_54px] font-int font-medium text-[16px] leading-[24px] text-black outline-none resize-none placeholder:text-[#9E9E9E] focus:border-[#FF7A18] transition-colors"
+          className="w-full h-[112px] max-md:h-[136px] border border-[#BDBDBD] rounded-[8px] p-[10px_10px_54px] font-int font-medium text-[16px] leading-[24px] text-black outline-none resize-none placeholder:text-[#9E9E9E] focus:border-[#FF7A18] transition-colors"
         />
       </div>
     </>

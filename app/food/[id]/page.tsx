@@ -52,8 +52,8 @@ export default async function FoodDetail({
     <main className="font-int bg-[#F3F4F6] min-h-screen">
       <Header bg="white" />
 
-      <section className="flex  w-full h-[1061px]">
-        <div className="relative w-[661px] h-full">
+      <section className="flex flex-col lg:flex-row w-full lg:min-h-screen xl:h-[1061px]">
+        <div className="relative w-full lg:w-[45%] xl:w-[661px] h-[300px] md:h-[400px] lg:h-auto shrink-0">
           <Image
             src={food.img}
             alt={food.name}
@@ -63,8 +63,8 @@ export default async function FoodDetail({
         </div>
 
         {/* Food details */}
-        <div className="flex-1 h-full bg-[#F3F4F6] p-[15px_55px_24px_41px] flex items-center justify-center">
-          <div className="w-[683px] h-[1031.09px] flex flex-col items-end p-[19px_17px] gap-[4px] bg-white rounded-[4px] overflow-y-auto">
+        <div className="flex-1 bg-[#F3F4F6] p-[14px] md:p-[15px_24px_24px] lg:p-[15px_30px_24px_30px] xl:p-[15px_55px_24px_41px] flex items-start lg:items-center justify-center">
+          <div className="w-full xl:max-w-[683px] lg:max-h-[1031px] flex flex-col items-end p-[19px_17px] max-md:p-[14px] gap-[4px] bg-white rounded-[4px] overflow-y-auto">
             <FoodDetailsForm
               name={food.name}
               price={food.price}
