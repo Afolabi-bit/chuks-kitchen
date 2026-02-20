@@ -34,25 +34,44 @@ chuks-kitchen/
 ├── app/
 │   ├── globals.css          # Global styles, Tailwind theme, custom breakpoints
 │   ├── layout.tsx           # Root layout with Inter, Jost, Island Moments & Poppins fonts
+│   ├── page.tsx             # Home page
+│   ├── explore/
+│   │   └── page.tsx         # Explore / menu page
 │   ├── onboarding/
 │   │   └── page.tsx         # Landing / onboarding page
 │   └── auth/
 │       └── page.tsx         # Login & create account page
 ├── components/
-│   └── Footer.tsx           # Global footer with back-to-top button
-└── public/
-    ├── onboarding-desktop.png
-    ├── onboarding-mobile.png
-    ├── fork-knife.png
-    ├── delivery-icon.png
-    ├── mail.svg
-    ├── lock.svg
-    ├── visibility_off.svg
-    ├── google.png
-    └── facebook.svg
+│   ├── Header.tsx           # Responsive header with mobile slide-out nav
+│   ├── Footer.tsx           # Global footer with back-to-top button
+│   └── MenuCategories.tsx   # Interactive category sidebar (client component)
+├── data.js                  # Static data arrays for menus & categories
+└── public/                  # Images, icons, and static assets
 ```
 
 ## Pages Built
+
+### Home (`/`)
+
+The main landing page showcasing the restaurant's offerings. It features:
+
+- **Full-width hero** — background image with dark overlay, heading, subtitle, and "Discover what's new" CTA
+- **Floating search bar** — positioned overlapping the hero bottom with a search icon and styled placeholder
+- **Popular Categories** — responsive grid of 6 category cards (3 hidden on mobile) with food images and labels
+- **Chef's Specials** — 6 dish cards with images, descriptions, prices, and "Add to Cart" buttons
+- **CTA banner** — full-width promotional section with background image, heading, and call-to-action
+- **Responsive design** — scales across mobile, tablet, laptop, and 1440px desktop with per-breakpoint sizing
+
+### Explore (`/explore`)
+
+The menu exploration page with category filtering and food cards. It features:
+
+- **Hero section** — full-width background image with dark overlay, restaurant name, and tagline; height and text scale across breakpoints
+- **Menu Categories** — interactive sidebar with 7 clickable categories; active category highlighted with orange background and left accent bar; clicking a category smooth-scrolls to its section
+- **Popular section** — responsive 3-column grid of food cards with images, descriptions, prices, and add-to-cart buttons
+- **Jollof Rice & Entrees** — 3-column grid of entree cards
+- **Swallow & Soups** — 3-column grid of soup/swallow cards
+- **Responsive grid** — switches from 3-column to single-column on mobile with horizontal card layout
 
 ### Onboarding (`/onboarding`)
 
@@ -106,9 +125,18 @@ Beyond the original Figma design, the following adjustments were made during dev
 - **In-page footer removed** — the copyright / Privacy Policy / Terms of Service section originally inside the hero panel was removed; these links were relocated to the global footer.
 - **Hover States** — buttons and links now have hover states.
 
+### Home Page
+
+- **Card hover effects** — lift, shadow, and image zoom micro-animations on both Popular Categories and Chef's Specials cards
+
 ### Auth Page
 
 - **Hover States** — buttons and links now have hover states.
+
+### Explore Page
+
+- **Menu Categories** — interactive client component with click-to-highlight category selection
+- **Card hover effects** — lift, shadow, and image zoom micro-animations added for a modern feel
 
 ## Fonts
 

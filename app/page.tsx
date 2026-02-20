@@ -54,16 +54,16 @@ export default function Home() {
           {popularCategories.map((category, index) => (
             <div
               key={index}
-              className={`w-full md:w-[220px] lg:w-[280px] xl:w-[390px] h-auto md:h-[260px] lg:h-[330px] xl:h-[393px] bg-white rounded-[8px] flex flex-col items-center ${
+              className={`w-full md:w-[220px] lg:w-[280px] xl:w-[390px] h-auto md:h-[260px] lg:h-[330px] xl:h-[393px] bg-white rounded-[8px] flex flex-col items-center group hover:-translate-y-1 hover:shadow-lg transition-all duration-200 ${
                 index >= 3 ? "hidden md:flex" : ""
               }`}
             >
-              <div className="relative w-full h-[200px] md:h-[150px] lg:h-[190px] xl:h-[222px]">
+              <div className="relative w-full h-[200px] md:h-[150px] lg:h-[190px] xl:h-[222px] overflow-hidden rounded-[8px_8px_0_0]">
                 <Image
                   fill
                   src={category.img}
                   alt={category.name}
-                  className="object-cover rounded-[8px_8px_0_0]"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <p className="flex-1 flex items-center justify-center text-[16px] md:text-[15px] lg:text-[18px] xl:text-[24px] font-medium leading-[1.42] text-center text-[#1F2937] p-[8px] md:p-[6px] lg:p-[8px]">
@@ -88,16 +88,16 @@ export default function Home() {
           {chefsSpecials.map((special, index) => (
             <div
               key={index}
-              className={`w-full md:w-[220px] lg:w-[280px] xl:w-[390px] h-auto md:h-[340px] lg:h-[410px] xl:h-[487px] bg-white rounded-[8px] flex flex-col items-center ${
+              className={`w-full md:w-[220px] lg:w-[280px] xl:w-[390px] h-auto md:h-[340px] lg:h-[410px] xl:h-[487px] bg-white rounded-[8px] flex flex-col items-center group hover:-translate-y-1 hover:shadow-lg transition-all duration-200 ${
                 index >= 3 ? "hidden md:flex" : ""
               }`}
             >
-              <div className="relative w-full h-[200px] md:h-[150px] lg:h-[190px] xl:h-[222px]">
+              <div className="relative w-full h-[200px] md:h-[150px] lg:h-[190px] xl:h-[222px] overflow-hidden rounded-[8px_8px_0_0]">
                 <Image
                   fill
                   src={special.img}
                   alt={special.name}
-                  className="object-cover rounded-[8px_8px_0_0]"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <div className="p-[16px_12px_24px] md:p-[14px_12px_16px] lg:p-[20px_16px_28px] xl:p-[25px_17px_46px] flex-1 w-full flex flex-col justify-between">
