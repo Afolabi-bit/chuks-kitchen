@@ -44,7 +44,7 @@ export default function Home() {
         {/* Search bar -- floats overlapping the bottom of the hero */}
         <form className="bg-white absolute w-[90%] md:w-[85%] lg:w-[80%] xl:w-[1069px] h-[60px] md:h-[66px] lg:h-[72px] xl:h-[78px] z-20 left-1/2 -translate-x-1/2 bottom-[-30px] md:bottom-[-33px] lg:bottom-[-36px] xl:bottom-[-39px] rounded-[8px] p-[12px] md:p-[14px] lg:p-[16px] flex gap-[12px] md:gap-[14px] lg:gap-[16px] justify-center items-center shadow-[0px_6px_30px_5px_rgba(0,0,0,0.12)]">
           <div className="flex justify-center items-center size-[36px] md:size-[40px] lg:size-[44px] xl:size-[46px]">
-            <img src="/search-icon.png" alt="search" />
+            <img src="/Search-icon.png" alt="search" />
           </div>
           <input
             type="text"
