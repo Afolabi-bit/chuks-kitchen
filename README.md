@@ -2,6 +2,9 @@
 
 A food ordering web application bringing authentic Nigerian home cooking to your doorstep. Built with Next.js 16, React 19, and Tailwind CSS 4.
 
+## Live
+[https://chuks-kitchen-ruby.vercel.app/](https://chuks-kitchen-ruby.vercel.app/)
+
 ## Tech Stack
 
 | Technology   | Version | Purpose                                     |
